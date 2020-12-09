@@ -30,11 +30,10 @@ def create_random_data(dtype, file_type, only_file):
         return None, file_path, None
 
     if dtype == 'datetime64[s]':
-        n_samples = 2**18
-        n_features = 2**6
+        n_samples = 2**19
     else:
         n_samples = 2**21
-        n_features = 2**6
+    n_features = 2**6
     random_state = 23
     np.random.seed(random_state)
     X = np.random.rand(n_samples, n_features)

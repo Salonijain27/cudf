@@ -16,7 +16,7 @@ def get_dataset_dir():
         return "cudf/benchmarks/cuio_data/datasets/"
     return option.dataset_dir
 
-"""
+
 @pytest.mark.parametrize("skiprows", [None, 100000, 200000])
 @pytest.mark.parametrize("file_path", glob.glob(get_dataset_dir() + "avro_*"))
 def bench_avro(benchmark, file_path, use_buffer, skiprows):
@@ -88,7 +88,7 @@ def bench_json(benchmark, file_path, use_buffer, dtype):
         orient="records",
         dtype=dtype,
     )
-"""
+
 
 @pytest.mark.parametrize("dtype", ['float32', 'float64',
                                    'int32', 'int64',
